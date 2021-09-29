@@ -1,0 +1,31 @@
+@import "palette";
+
+@import "ebs-design/dist/styles/index.scss";
+
+@import "components/organisms";
+
+.ebs-layout .ebs-sidebar {
+  height: 100%;
+}
+
+.m-not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heart-icon {
+  color: red;
+}
+
+// todo caesar page
+.caesar-page {
+  &__textarea {
+    width: 30%;
+
+    @include mq($until: small-tablet) {
+      width: 90%;
+    }
+  }
+}
