@@ -4,12 +4,14 @@ import { SuspenseLoading } from "./molecules";
 import { Routes } from "libs/router/Routes";
 import { MainLayout } from "./organisms/Layout/Layout";
 
-export const App = () => (
-  <BrowserRouter>
-    <Suspense fallback={<SuspenseLoading />}>
-      <MainLayout>
-        <Routes />
-      </MainLayout>
-    </Suspense>
-  </BrowserRouter>
-);
+export const App = () => {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<SuspenseLoading />}>
+        <MainLayout>
+          <Routes />
+        </MainLayout>
+      </Suspense>
+    </BrowserRouter>
+  );
+};

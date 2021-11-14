@@ -1,6 +1,17 @@
-import { Col, Row, Textarea } from "ebs-design";
+import { Col, Row, Table, Textarea } from "ebs-design";
+import {useDebounce, useStateHandlers} from "hooks";
+
+interface StateProps {
+
+}
 
 export const CaesarPage = () => {
+  const [state, setState] = useStateHandlers<StateProps>({});
+
+  useDebounce(() => {
+    console.log('in debounce')
+  }, 3000);
+
   return (
     <Row className="caesar-page">
       <Col className="flex flex--column">
@@ -23,7 +34,7 @@ export const CaesarPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col className="flex justify-content--center">table</Col>
+          <Col className="flex justify-content--center"><Table  /></Col>
         </Row>
       </Col>
     </Row>
