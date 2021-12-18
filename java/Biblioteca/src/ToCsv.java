@@ -3,131 +3,131 @@ import java.util.ArrayList;
 
 public class ToCsv {
 
-    //константы
-    private final static String ENTER = " "; //константа для пробела
-    private final static String ENDL = "\n"; //константа для перехода на новою строку
+    // constante
+    private final static String ENTER = ""; // constantă pentru spațiu
+    private final static String ENDL = "\n"; // constantă pentru a comuta la o linie nouă
 
-    public static String toLineBook(Book book) { //метод перевода информации о книге в строку с параметром типа Book
+    public static String toLineBook(Book book) {// metodă de traducere a informațiilor despre carte într-un șir cu un parametru de tip Book
         StringBuilder strB = new StringBuilder();
-        //инициализация обьекта класса StringBuilder для записи всей информации в одну строку
-        strB.append(book.getIsbn()); //добавление isbn книги в строку
-        strB.append(ENTER); //разделение информации пробелом
-        strB.append(book.getTitle());//добавление названия книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getAuthor());//добавление автора книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getGenre());//добавление жанра книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getDateOfRelease());//добавление даты выпуска книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getLang());//добавление языка книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getNumberOfPages());//добавление кол-ва страниц книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getPrice());//добавление цены книги в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(book.getAvalabil());//добавление доступности книги в строку
-        strB.append(ENDL); //разделение информации переходом на новою строку.
-        //следующая строка, и информация о другой книге будет записывать с новой строки в файле
+        // inițializați un obiect din clasa StringBuilder pentru a scrie toate informațiile într-o singură linie
+        strB.append(book.getIsbn()); // adaugă isbn book la șir
+        strB.append(ENTER); // separați informațiile cu un spațiu
+        strB.append(book.getTitle()); // adaugă titlul cărții la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getAuthor()); // adaugă autorul cărții la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getGenre()); // adaugă genul cărții la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getDateOfRelease()); // adaugă data de lansare a cărții la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getLang()); // adaugă limba cărții la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getNumberOfPages()); // adaugă numărul de pagini de carte la un șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getPrice()); // adaugă prețul cărții la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(book.getAvalabil()); // adaugă accesibilitatea cărții la șir
+        strB.append(ENDL); // împărțiți informațiile saltând la o linie nouă.
+        // linia următoare, iar informațiile despre o altă carte vor fi scrise pe o nouă linie din fișier
 
-        return strB.toString();//возвращение результирующей строки
-    }//метод закрывается
+        return strB.toString(); // returnează șirul rezultat
+    } // metoda este închisă
 
-    static String toLineLib(Library lib) {//метод перевода информации о библиотеке в строку с параметром типа Library
-        ArrayList<Integer> l = lib.getBooks(); // запись в массив значения Isbn книг библиотеки
+    static String toLineLib(Library lib) {// metoda de traducere a informațiilor despre bibliotecă într-un șir cu un parametru de tip Library
+        ArrayList<Integer> l = lib.getBooks(); // scrieți valoarea Isbn a cărților de bibliotecă în matrice
         StringBuilder strB = new StringBuilder();
-        //инициализация обьекта класса StringBuilder для записи всей информации в одну строку
-        strB.append(lib.getIdLibrary());//добавление id библиотеки в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(lib.getAdres());//добавление адреса библиотеки в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(lib.getTelephone());//добавление номера телефона библиотеки в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(lib.getNumberOfBooks());//добавление кол-ва книг библиотеки в строку
-        strB.append(ENTER);//разделение информации пробелом
-        for (Integer integer : l) {//цикл for для записи isbn книг библиотеки по их кол-ву
-            strB.append(integer);//добавление isbn книг из библиотеки в строку
-            strB.append(ENTER);//разделение информации пробелом
-        }//цикл закрывается
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(lib.getDistrict());//добавление района библиотеки в строку
-        strB.append(ENDL);//разделение информации переходом на новою строку.
-        //следующая строка, и информация о другой книге будет записывать с новой строки в файле
+        // inițializați un obiect din clasa StringBuilder pentru a scrie toate informațiile într-o singură linie
+        strB.append(lib.getIdLibrary()); // adaugă id-ul bibliotecii la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(lib.getAdres()); // adăugați adresa bibliotecii la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(lib.getTelephone()); // adăugați numărul de telefon al bibliotecii la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(lib.getNumberOfBooks()); // adaugă numărul de cărți din bibliotecă la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        for (Integer integer : l) {// bucla for pentru a scrie cărțile bibliotecii ISbn după numărul lor
+            strB.append(integer); // adăugarea cărților ISbn din bibliotecă la șir
+            strB.append(ENTER); // separă informațiile cu un spațiu
+        } // bucla este închisă
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(lib.getDistrict()); // adaugă regiunea bibliotecii la șir
+        strB.append(ENDL); // separarea informațiilor prin tranziție la o nouă linie.
+        // linia următoare, iar informațiile despre o altă carte vor fi scrise pe o nouă linie din fișier
 
-        return strB.toString();//возвращение результирующей строки
-    }//метод закрывается
+        return strB.toString(); // returnează șirul rezultat
+    } // metoda este închisă
 
-    static String toLineAdLib(AdvancedLibrary lib) {//метод перевода информации о библиотеке в строку с параметром типа AdvancedLibrary
+    static String toLineAdLib(AdvancedLibrary lib) {// metoda de traducere a informațiilor din bibliotecă într-un șir cu un parametru de tip AdvancedLibrary
         StringBuilder strB = new StringBuilder();
-        //инициализация обьекта класса StringBuilder для записи всей информации в одну строку
-        strB.append(lib.getIdLibrary());//добавление id библиотеки в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(lib.getNumberOfFloors());//добавление кол-ва этажей библиотеки в строку
-        strB.append(ENTER);//разделение информации пробелом
-        strB.append(lib.getLibraryName());//добавление названия библиотеки в строку
-        strB.append(ENDL);//разделение информации переходом на новою строку.
-        //следующая строка, и информация о другой книге будет записывать с новой строки в файле
+        // inițializați un obiect din clasa StringBuilder pentru a scrie toate informațiile într-o singură linie
+        strB.append(lib.getIdLibrary()); // adaugă id-ul bibliotecii la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(lib.getNumberOfFloors()); // adaugă numărul de etaje biblioteci la șir
+        strB.append(ENTER); // separă informațiile cu un spațiu
+        strB.append(lib.getLibraryName()); // adăugați numele bibliotecii la șir
+        strB.append(ENDL); // separarea informațiilor prin tranziție la o nouă linie.
+        // linia următoare, iar informațiile despre o altă carte vor fi scrise pe o nouă linie din fișier
 
-        return strB.toString();//возвращение результирующей строки
-    }//метод закрывается
+        return strB.toString(); // returnează șirul rezultat
+    } // metoda este închisă
 
-    public static Book toClientBook(String line) {//метод перевода из строки в обьект класса Book
-        String data[] = line.split(ENTER);//создание массива строк с помощью раздения по пробелу
-        int isbn = Integer.parseInt(data[0]);//создание целочисленного параметра isbn книги
-        //с помощью явного преобразования в тип int первого эллемента массива строк
-        String title = data[1];//создание параметра названия книги из втрого эллемента массива строк
-        String author = data[2];//создание параметра автора книги из третьего эллемента массива строк
-        String genre = data[3];//создание параметра жанра книги из четвертого эллемента массива строк
-        String dateStr = data[4];//параметр даты выпуска книги из пятого эллемента массива строк
+    public static Book toClientBook(String line) { // metodă de transfer de la o linie la un obiect din clasa Book
+        String data[] = line.split(ENTER); // creează o matrice de șiruri de caractere prin împărțirea după spațiu
+        int isbn = Integer.parseInt(data[0]); // creează parametrul întreg isbn al cărții
+        // prin conversia explicită a primului element al matricei de șiruri în int
+        String title = data[1]; // creează parametrul titlului cărții din al treilea element al matricei de șiruri
+        String author = data[2]; // creează un parametru de autor de carte din al treilea element al matricei de șiruri
+        String genre = data[3]; // creează un parametru de gen de carte din al patrulea element al matricei de șiruri
+        String dateStr = data[4]; // parametrul datei de lansare a cărții din al cincilea element al matricei de șiruri
         LocalDate dateOfRelease = LocalDate.parse(dateStr);
-        //явное преобразование строки даты выпуска книги в тип данных даты
-        String lang = data[5];//создание параметра языка книги из шестого эллемента массива строк
-        int numOfPages = Integer.parseInt(data[6]);//целочисленный параметр кол-ва страниц книги
-        //с помощью явного преобразования в тип int седьмого эллемента массива строк
-        double price = Double.parseDouble(data[7]);//параметр числа с плавающей точки  цены книги
-        //с помощью явного преобразования в тип double восьмого эллемента массива строк
-        String avail = data[8];//параметр доступности книги из девятого эллемента массива строк
+        // convertește în mod explicit șirul datei de emitere a cărții în tipul de date privind data
+        String lang = data[5]; // creează un parametru de limbaj de carte din al șaselea element al matricei de șiruri
+        int numOfPages = Integer.parseInt(data[6]); // parametru întreg al numărului de pagini de carte
+        // prin conversia explicită a celui de-al șaptelea element al matricei de șiruri în int
+        double price = Double.parseDouble(data[7]); // parametrul numărului în virgulă mobilă al prețului cărții
+        // folosind o conversie explicită la tipul dublu al celui de-al optulea element al matricei de șiruri
+        String avail = data[8]; // parametrul disponibilității cărții din al nouălea element al matricei de șiruri
 
-        //создание обьекта класса Book с данными параметрами
+        // creăm un obiect din clasa Book cu parametrii dați
         Book client = new Book(isbn, title, author, genre, dateOfRelease, lang, numOfPages, price, avail);
-        return client; //возврашение обьекта типа Book
-    }//метод закрывается
+        return client; // returnează un obiect de tip Book
+    } // metoda este închisă
 
-    static Library toClientLib(String line) {//метод перевода из строки в обьект класса Library
-        String data[] = line.split(ENTER);//создание массива строк с помощью раздения по пробелу
-        int id = Integer.parseInt(data[0]);//создание целочисленного параметра Id библиотеки
-        //с помощью явного преобразования в тип int первого эллемента массива строк
-        String adres = data[1];//параметр адреса библиотеки из втрого эллемента массива строк
-        String telephone = data[2];//параметр телефона библиотеки из третьего эллемента
-        int n = Integer.parseInt(data[3]);//создание целочисленного параметра кол-ва книг
-        //с помощью явного преобразования в тип int четвертого эллемента массива строк
+    static Library toClientLib(String line) { // metoda de transfer de la un șir la un obiect din clasa Library
+        String data[] = line.split(ENTER); // creează o matrice de șiruri de caractere prin împărțirea după spațiu
+        int id = Integer.parseInt(data[0]); // creează un parametru întreg Id al bibliotecii
+        // prin conversia explicită a primului element al matricei de șiruri în int
+        String adres = data[1]; // parametrul adresei bibliotecii din al treilea element al matricei de șiruri
+        String telephone = data[2]; // parametrul telefonului bibliotecii din al treilea element
+        int n = Integer.parseInt(data[3]); // creează un parametru întreg pentru numărul de cărți
+        // prin conversia explicită a celui de-al patrulea element al matricei de șiruri în int
         ArrayList<Integer> l = new ArrayList<>();
-        //создание списка, предназначенного для хранения isbn книг библиотеки
-        int i = 4; //инициализация индекса эллемента массива строк
+        // creează o listă pentru stocarea cărților din bibliotecă isbn
+        int i = 4; // inițializează indexul elementului din tabloul de șiruri
         for (int j = 0; j < n; i++, j++) {
-            //цикл for для записи isbn книг библиотеки в список до кол-ва книг библиотеки
+            // bucla pentru a scrie cărți de bibliotecă ISbn în listă până la numărul de cărți de bibliotecă
             l.add(Integer.parseInt(data[i]));
-            //запись значения из i-нного эллемента массива строк с помощью явного преобразования
-        }//цикл закрывается
+            // scrieți valoarea din elementul i al matricei de șiruri folosind o conversie explicită
+        } // bucla este închisă
         String district = data[i + 1];
-        //создание параметра района библиотеки из (i+1) - нного эллемента массива строк
+        // creăm un parametru de regiune de bibliotecă din elementul (i + 1) - al n-lea al matricei de șiruri
 
-        //создание обьекта класса Library с данными параметрами
+        // creăm un obiect din clasa Library cu parametrii dați
         Library lib = new Library(id, adres, telephone, n, l, district);
-        return lib;//возврашение обьекта типа Library
-    }//метод закрывается
+        return lib; // returnează un obiect Library
+    } // metoda este închisă
 
     static AdvancedLibrary toClientAdvLib(String line) {
-        //метод перевода из строки в обьект класса AdvancedLibrary
-        String data[] = line.split(ENTER);//создание массива строк с помощью раздения по пробелу
-        int id = Integer.parseInt(data[0]);//создание целочисленного параметра id библиотеки
-        //с помощью явного преобразования в тип int первого эллемента массива строк
-        int floors = Integer.parseInt(data[1]);//параметр кол-ва этажей библиотеки
-        //с помощью явного преобразования в тип int втрого эллемента массива строк
-        String name = data[2];//параметр названия библиотеки из третьего эллемента массива строк
+        // metoda de transfer de la un șir la un obiect din clasa AdvancedLibrary
+        String data[] = line.split(ENTER); // creează o matrice de șiruri de caractere prin împărțirea după spațiu
+        int id = Integer.parseInt(data[0]); // creează un ID de parametru întreg al bibliotecii
+        // prin conversia explicită a primului element al matricei de șiruri în int
+        int floors = Integer.parseInt(data[1]); // parametrul numărului de etaje din bibliotecă
+        // folosind o conversie explicită în tipul int al celui de-al treilea element al matricei de șiruri
+        String name = data[2]; // parametrul numelui bibliotecii din al treilea element al matricei de șiruri
 
-        //создание обьекта класса AdvancedLibrary с данными параметрами
+        // creăm un obiect din clasa AdvancedLibrary cu acești parametri
         AdvancedLibrary client = new AdvancedLibrary(id, floors, name);
-        return client;//возврашение обьекта типа AdvancedLibrary
-    }//метод закрывается
-}//класс закрывается
+        return client; // returnează un obiect de tip AdvancedLibrary
+    } // metoda este închisă
+} // clasa este închisă

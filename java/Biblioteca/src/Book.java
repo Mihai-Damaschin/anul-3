@@ -151,7 +151,8 @@ public class Book {
     @Override
     // Declarea metodei ce returneaza atributele clasei intr-un string
     public String toString() {
-        return "Book{" + "isbn=" + isbn + ", title=" + title + ", author=" + author + ", genre=" + genre + ", dateOfRelease=" + dateOfRelease + ", lang=" + lang + ", numberOfPages=" + numberOfPages + ", price=" + price + ", avalabil=" + avalabil + '}';
+        return "Book{" + "isbn=" + isbn + ", title=" + title + ", author=" + author + ", genre=" + genre + ", dateOfRelease=" +
+                dateOfRelease + ", lang=" + lang + ", numberOfPages=" + numberOfPages + ", price=" + price + ", avalabil=" + avalabil + '}';
     }
 }// inchiderea clasei Library
 

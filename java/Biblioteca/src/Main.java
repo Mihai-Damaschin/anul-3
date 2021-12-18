@@ -26,458 +26,451 @@ public class Main {  // deschide clasa
         menu();  // apelarea functiei menu
     } // inchiderea metodei
 
-    public static void numberOfLibsThatStartWith45 () {
+    public static void numberOfLibsThatStartWith45() {
         // Declararea metodei ce determina numarul de biblioteci a caror numarul de telefon incepe cu 45
         int numOfLibs = 0; // inițializarea numărului de biblioteci, acestea sunt încă 0
-        for (Library lib1: libList) {// îmbunătățit pentru bucla peste lista de biblioteci
-            if (lib1.getTelephone (). startsWith ("45")) {// verificați dacă condiția este îndeplinită
-                numOfLibs ++; // dacă condiția este adevărată, numărul de biblioteci crește cu 1
+        for (Library lib1 : libList) {// îmbunătățit pentru bucla peste lista de biblioteci
+            if (lib1.getTelephone().startsWith("45")) {// verificați dacă condiția este îndeplinită
+                numOfLibs++; // dacă condiția este adevărată, numărul de biblioteci crește cu 1
             } // instrucțiunea if este închisă
         } // bucla este închisă
-        System.out.println ("Număr de biblioteci al căror număr de telefon începe cu 45 =" + numOfLibs); // scoate rezultatul în consolă
+        System.out.println("Număr de biblioteci al căror număr de telefon începe cu 45 =" + numOfLibs); // scoate rezultatul în consolă
     } // metoda este închisă
 
     public static void booksWithMaxPages() {
-        //Метод для определения кол-ва книг с максимальным количеством страниц
+        // Metodă de determinare a numărului de cărți cu numărul maxim de pagini
         int maxNumOfPages = 0;
-        //инициализация переменой, которая содержит максимальное значение станиц в книге
-        int counter = 0; // инициализация счетчика книг
-        for (Book book : bookList) { //улучшенный цикл for по списку книг
+        // inițializare cu o variabilă care conține valoarea maximă a paginilor din carte
+        int counter = 0; // inițializați contorul de cărți
+        for (Book book : bookList) {// îmbunătățit pentru bucla pe lista de cărți
             if (book.getNumberOfPages() > maxNumOfPages) {
-                //если количество страниц книги больше максимального значения
+                // dacă numărul de pagini din carte este mai mare decât valoarea maximă
                 maxNumOfPages = book.getNumberOfPages();
-                // максимальное значение меняется на кол-во страниц текущей книги
-            }//оператор if закрывается
-        }// цикл закрывается
-        System.out.println("The books with maximum number of pages:"); //вывод информации на консоль
-        for (Book book : bookList) {//улучшенный цикл for по списку книг
+                // valoarea maximă este modificată de numărul de pagini ale cărții curente
+            } // instrucțiunea if este închisă
+        } // bucla este închisă
+        System.out.println("Cartile cu numarul maxim de pagini:"); // scoate informații în consolă
+        for (Book book : bookList) {// îmbunătățit pentru bucla pe lista de cărți
             if (book.getNumberOfPages() == maxNumOfPages) {
-                //если количество страниц текущей книги совпадает с максимальным количеством
-                System.out.println(book.toString()); //информация о данной книге выводится в консоль
-                counter++; //счетчик увеличивается на 1
-            }//оператор if закрывается
-        }// цикл закрывается
-        System.out.println("Number of books with maximum number of pages = " + counter);
-        //вывод информации о кол-ве книг с максимальным кол-вом страниц на консоль
-    }//метод закрывается
+                // dacă numărul de pagini ale cărții curente se potrivește cu numărul maxim
+                System.out.println(book.toString()); // informațiile despre această carte sunt tipărite pe consolă
+                counter++; // contorul este incrementat cu 1
+            } // instrucțiunea if este închisă
+        } // bucla este închisă
+        System.out.println("Număr de cărți cu număr maxim de pagini =" + counter);
+        // trimite informații despre numărul de cărți cu numărul maxim de pagini către consolă
+    } // metoda este închisă
 
     public static void libsWithFloors() {
-        //Метод подсчета кол-ва библиотек с кол-вом этажей, введеных с клавиатуры из определенного интервала
-        int counter = 0; //инизицализация счетчика кол-ва библиотек
-        System.out.println("Please enter number of floors (1 to 7) in the library :");
-        //вывод информации на консоль и просьба ввести определенное значение
-        int floors = sc.nextInt(); //инициализация переменной необходимого числа этажей и ее
-        //определение  ее значения с помощью Scanner из консоли
+        // Metodă de numărare a numărului de biblioteci cu numărul de etaje introdus de la tastatură dintr-un anumit interval
+        int counter = 0; // inițializați numărul de biblioteci
+        System.out.println("Vă rugăm să introduceți numărul de etaje (de la 1 la 7) în bibliotecă:");
+        // scoateți informații în consolă și cereți o anumită valoare
+        int floors = sc.nextInt(); // inițializați variabila numărului necesar de etaje și a acesteia
+        // determinăm valoarea sa folosind Scanner din consolă
         for (AdvancedLibrary lib : advList) {
-            //улучшенный цикл for по списку, основанном на классе Advanced Library
+            // îmbunătățit pentru lista de buclă bazată pe clasa Bibliotecă avansată
             if (lib.getNumberOfFloors() == floors) {
-                // если кол-во этажей определенной библиотеки соответствует заданному
-                counter++; // счетчик увеличивается на единицу
-            }//оператор if закрывается
-        }// цикл закрывается
-        System.out.println("Number of libraries with " + floors + " floors = " + counter);
-        //вывод информации и результата на консоль
-    }//метод закрывается
+                // dacă numărul de etaje ale unei anumite biblioteci se potrivește cu cel dat
+                counter++; // contorul este incrementat cu unu
+            } // instrucțiunea if este închisă
+        } // bucla este închisă
+        System.out.println("Număr de biblioteci cu" + floors + "etaje =" + counter);
+        // scoateți informații și rezultat în consolă
+    } // metoda este închisă
 
-    public static void insertBooks() { //Метод ввода информации о книгах в список
-        System.out.println("Please enter number of books:"); //подсказка для пользователя
-        int n = sc.nextInt(); //инициализация кол-ва вводимых книг из консоли
-        System.out.println("Please enter the information about " + n + " books");
-        //подсказка для пользователя
-        for (int i = 0; i < n; i++) { //цикл for
-            Book b = new Book();//инициализация нового обьекта класса книг
-            System.out.println("Book #" + i + 1);//подсказка для пользователя
-            System.out.println("ISBN:");//подсказка для пользователя
-            b.setIsbn(sc.nextInt());//присваивание значения isbn через консоль
-            System.out.println("Title:");//подсказка для пользователя
-            b.setTitle(sc.next());//присваивание значения названия книги через консоль
-            System.out.println("Author:");//подсказка для пользователя
-            b.setAuthor(sc.next());//присваивание значения автора через консоль
-            System.out.println("Genre:");//подсказка для пользователя
-            b.setGenre(sc.next());//присваивание значения жанра через консоль
-            System.out.println("Date of Release yyyy-mm-dd:");//подсказка для пользователя
+    public static void insertBooks() {// Metodă de introducere a informațiilor despre cărți în listă
+        System.out.println("Vă rugăm să introduceți numărul de cărți:"); // indiciu pentru utilizator
+        int n = sc.nextInt(); // inițializarea numărului de cărți introduse din consolă
+        System.out.println("Vă rugăm să introduceți informațiile despre" + n + "cărți");
+        // indiciu pentru utilizator
+        for (int i = 0; i < n; i++) {// bucla for
+            Book b = new Book(); // inițializarea unui nou obiect al clasei de carte
+            System.out.println("Cartea #" + i + 1); // indiciu pentru utilizator
+            System.out.println("ISBN:"); // indiciu pentru utilizator
+            b.setIsbn(sc.nextInt()); // atribuirea valorii isbn prin intermediul consolei
+            System.out.println("Titlu:"); // indiciu pentru utilizator
+            b.setTitle(sc.next()); // atribuirea valorii titlului cărții prin intermediul consolei
+            System.out.println("Autor:"); // indiciu pentru utilizator
+            b.setAuthor(sc.next()); // atribuirea valorii autorului prin consolă
+            System.out.println("Gen:"); // indiciu pentru utilizator
+            b.setGenre(sc.next()); // atribuirea valorii genului prin consolă
+            System.out.println("Data lansării aaaa-ll-zz:"); // indiciu pentru utilizator
             b.setDateOfRelease(LocalDate.parse(sc.next()));
-            //присваивание значения даты выпуска через консоль
-            System.out.println("Language:");//подсказка для пользователя
-            b.setLang(sc.next());//присваивание значения языка через консоль
-            System.out.println("Number of Pages:");//подсказка для пользователя
-            b.setNumberOfPages(sc.nextInt());//присваивание значения страниц через консоль
-            System.out.println("Price:");//подсказка для пользователя
-            b.setPrice(sc.nextDouble());//присваивание значения цены через консоль
-            System.out.println("Availability:");//подсказка для пользователя
-            b.setAvalabil(sc.next());//присваивание значения доступности через консоль
-            bookList.add(b);//добавление обьекта в список
-        }// цикл закрывается
-    }//метод закрывается
+            // atribuiți valoarea datei de lansare prin consolă
+            System.out.println("Limba:"); // indiciu pentru utilizator
+            b.setLang(sc.next()); // atribuirea unei valori de limbă prin consolă
+            System.out.println("Număr de pagini:"); // indiciu pentru utilizator
+            b.setNumberOfPages(sc.nextInt()); // atribuirea valorilor paginii prin intermediul consolei
+            System.out.println("Preț:"); // indiciu pentru utilizator
+            b.setPrice(sc.nextDouble()); // atribuirea valorii prețului prin consolă
+            System.out.println("Disponibilitate:"); // indiciu pentru utilizator
+            b.setAvalabil(sc.next()); // atribuirea valorii de accesibilitate prin consolă
+            bookList.add(b); // adaugă un obiect la listă
+        } // bucla este închisă
+    } // metoda este închisă
 
-    public static void insertLibraries() {//Метод ввода информации о библиотеках в список
-        System.out.println("Please enter number of libraries:");//подсказка для пользователя
-        int n = sc.nextInt();//инициализация кол-ва вводимых библиотек из консоли
-        System.out.println("Please enter the information about " + n + " libraries");//подсказка для пользователя
+    public static void insertLibraries() {// Metodă de introducere a informațiilor despre biblioteci în listă
+        System.out.println("Vă rugăm să introduceți numărul de biblioteci:"); // indiciu pentru utilizator
+        int n = sc.nextInt(); // inițializarea numărului de biblioteci introduse din consolă
+        System.out.println("Vă rugăm să introduceți informațiile despre" + n + "biblioteci"); // indiciu pentru utilizator
 
-        for (int i = 0; i < n; i++) {//цикл for
-            Library l = new Library();//инициализация нового обьекта класса библиотек
-            System.out.println("Library #" + (i + 1));//подсказка для пользователя
-            System.out.println("ID:");//подсказка для пользователя
-            l.setIdLibrary(sc.nextInt());//присваивание значения id библиотеки через консоль
-            System.out.println("Address: ");//подсказка для пользователя
-            l.setAdres(sc.next());//присваивание значения адресса через консоль
-            System.out.println("Telephone number: ");//подсказка для пользователя
-            l.setTelephone(sc.next());//присваивание значения номера телефона через консоль
-            System.out.println("Number of books: ");//подсказка для пользователя
-            l.setNumberOfBooks(sc.nextInt());//присваивание значения кол-ва книг через консоль
+        for (int i = 0; i < n; i++) {// bucla for
+            Library l = new Library(); // inițializarea unui nou obiect al clasei de bibliotecă
+            System.out.println("Biblioteca #" + (i + 1)); // indiciu pentru utilizator
+            System.out.println("ID:"); // indiciu pentru utilizator
+            l.setIdLibrary(sc.nextInt()); // atribuirea valorii id-ului bibliotecii prin consolă
+            System.out.println("Adresă:"); // indiciu pentru utilizator
+            l.setAdres(sc.next()); // atribuirea valorii adresei prin consolă
+            System.out.println("Număr de telefon:"); // indiciu pentru utilizator
+            l.setTelephone(sc.next()); // atribuirea valorii numărului de telefon prin consolă
+            System.out.println("Număr de cărți:"); // indiciu pentru utilizator
+            l.setNumberOfBooks(sc.nextInt()); // atribuirea valorii numărului de cărți prin intermediul consolei
             ArrayList<Integer> lb = new ArrayList<>();
-            //инизицализация списка класса ArrayList целочисленного типа
-            for (int j = 0; j < l.getNumberOfBooks(); j++) {//цикл for
-                System.out.println("ISBN of book #" + (j + 1) + ": ");
-                //подсказка для пользователя
-                lb.add(sc.nextInt());//присваивание значения isbn  книг через консоль
-                l.setBooks(lb);//добавление  isbn книг в список
-            }// цикл закрывается
-            System.out.println("District:");//подсказка для пользователя
-            l.setDistrict(sc.next());//присваивание значения района через консоль
-            libList.add(l);//добавление обьекта в список
-            System.out.println("Do you want to enter and advanced information about this library ? ");//подсказка для пользователя
-            System.out.println("'y' - yes");//подсказка для пользователя
-            System.out.println("'n' - no");//подсказка для пользователя
-            System.out.println("Your choice -> ");//подсказка для пользователя
-            String ch = sc.next();//считывание выбора с консоли
-            if ("y".equals(ch)) {//если пользователь выбрал добавить информацию
+            // inițializați lista clasei ArrayList de tip întreg
+            for (int j = 0; j < l.getNumberOfBooks(); j++) {// bucla for
+                System.out.println("ISBN al cărții #" + (j + 1) + ":");
+                // indiciu pentru utilizator
+                lb.add(sc.nextInt()); // atribuirea valorii isbn cărților prin consolă
+                l.setBooks(lb); // adaugă cărți ISbn la listă
+            } // bucla este închisă
+            System.out.println("District:"); // indiciu pentru utilizator
+            l.setDistrict(sc.next()); // atribuirea valorii regiunii prin consolă
+            libList.add(l); // adaugă un obiect la listă
+            System.out.println("Doriți să introduceți și informații avansate despre această bibliotecă?"); // Sugestie pentru utilizator
+            System.out.println("'y' - yes"); // indiciu pentru utilizator
+            System.out.println("'n' - nu"); // indiciu pentru utilizator
+            System.out.println("Alegerea dvs. ->"); // indiciu pentru utilizator
+            String ch = sc.next(); // citește selecția din consolă
+            if ("y".equals(ch)) {// dacă utilizatorul a ales să adauge informații
                 insertAdvancedLib(l.getIdLibrary());
-                //вызов метода заполнения информации к классу AdvancedLibrary
-                exportAdLib(); //вызов метода экспорта данных списка типа AdvancedLibrary
-            }//оператор if закрывается
-        }// цикл закрывается
-    }//метод закрывается
+                // apelează metoda de completare a informațiilor în clasa AdvancedLibrary
+                exportAdLib(); // apelează metoda de export a datelor din listă de tip AdvancedLibrary
+            } // instrucțiunea if este închisă
+        } // bucla este închisă
+    } // metoda este închisă
 
     private static void insertAdvancedLib(int id) {
-        //Метод ввода информации о библиотеках с расширенными параметрами в список
+        // Metodă de introducere a informațiilor despre bibliotecile cu parametri extinși în listă
         AdvancedLibrary al = new AdvancedLibrary();
-        //инициализация нового обьекта класса библиотек с доп. параметрами
-        al.setId(id);//присваивание значения id из класса Library
-        System.out.println("Number of Floors: ");//подсказка для пользователя
-        al.setNumberOfFloors(sc.nextInt());//присваивание значения этажей через консоль
-        System.out.println("Name of Library: ");//подсказка для пользователя
-        al.setLibraryName(sc.next());//присваивание значения названия через консоль
-        advList.add(al);//добавление обьекта в список
-    }//метод закрывается
+        // inițializarea unui nou obiect al clasei de biblioteci cu add. parametrii
+        al.setId(id); // atribuirea valorii id din clasa Library
+        System.out.println("Număr de etaje:"); // indiciu pentru utilizator
+        al.setNumberOfFloors(sc.nextInt()); // atribuirea valorii etajelor prin intermediul consolei
+        System.out.println("Numele bibliotecii:"); // indiciu pentru utilizator
+        al.setLibraryName(sc.next()); // atribuirea valorii numelui prin consola
+        advList.add(al); // adaugă un obiect la listă
+    } // metoda este închisă
 
     private static void exportBook() {
-        //Метод экспорта информации о книгах в текстовый файл
+        // Metodă pentru exportarea informațiilor despre cărți într-un fișier text
         try (FileWriter fileW = new FileWriter("bookList.csv")) {
-            // try-with-resources, инициализируется и открывается поток FileWriter с с
-            //параметром точки назначения файла
-            for (Book user : bookList) {//улучшенный цикл for по списку книг
+            // încercați cu resurse, inițializați și deschideți fluxul FileWriter cu c
+            // parametrul de destinație al fișierului
+            for (Book user : bookList) {// îmbunătățit pentru bucla pe lista de cărți
                 String line = ToCsv.toLineBook(user);
-                //инициализация вводимой в файл строки возвращаемой строкой вызываемого метода
-                fileW.write(line); //запись строки в файл
-            }// цикл закрывается
+                // inițializarea șirului introdus în fișier cu șirul returnat al metodei apelate
+                fileW.write(line); // scrie linia în fișier
+            } // bucla este închisă
         } catch (IOException ex) {
-            //catch для исключений, которые могут появиться в ходе выполнения кода в try,
-            //ожидается ошибка ввода-вывода
-            LOG.log(Level.SEVERE, null, ex); //вывод ошибки на консоль через логгер
-        }//закрывается связка try-catch, FileWriter автоматически закрывается
-    }//метод закрывается
+            // captează excepțiile care pot apărea în timpul execuției codului în încercare,
+            // Se așteaptă eroare I/O
+            LOG.log(Level.SEVERE, null, ex); // Ieșire de eroare către consolă prin intermediul loggerului
+        } // legătura try-catch este închisă, FileWriter este închis automat
+    } // metoda este închisă
 
     private static void exportLib() {
-        //Метод экспорта информации о библиотеках в текстовый файл
+        // Metodă pentru exportarea informațiilor despre biblioteci într-un fișier text
         try (FileWriter fileW = new FileWriter("libraryList.csv")) {
-            // try-with-resources, инициализируется и
-            //открывается поток FileWriter с с параметром точки назначения файла
-            for (Library user : libList) {//улучшенный цикл for по списку библиотек
+            // try-with-resources, inițializat și
+            // deschide un flux FileWriter cu un parametru de destinație a fișierului
+            for (Library user : libList) {// bucla for îmbunătățită pe lista bibliotecii
                 String line = ToCsv.toLineLib(user);
-                //инициализация вводимой в файл строки возвращаемой строкой вызываемого метода
-                fileW.write(line);//запись строки в файл
-            }// цикл закрывается
+                // inițializarea șirului introdus în fișier cu șirul returnat al metodei apelate
+                fileW.write(line); // scrie linie în fișier
+            } // bucla este închisă
         } catch (IOException ex) {
-            //catch для исключений, которые могут появиться в ходе выполнения кода в try,
-            // ожидается ошибка ввода-вывода
-            LOG.log(Level.SEVERE, null, ex);//вывод ошибки на консоль через логгер
-        }//закрывается связка try-catch, FileWriter автоматически закрывается
-    }//метод закрывается
+            // captează excepțiile care pot apărea în timpul execuției codului în încercare,
+            // Se așteaptă eroare I/O
+            LOG.log(Level.SEVERE, null, ex); // ieșire de eroare către consolă prin intermediul loggerului
+        } // legătura try-catch este închisă, FileWriter este închis automat
+    } // metoda este închisă
 
     private static void exportAdLib() {
-        //Метод экспорта информации о библиотеках с доп. параметрами в текстовый файл
+        // Metodă de export de informații despre biblioteci cu add. parametri într-un fișier text
         try (FileWriter fileW = new FileWriter("libraryAdvancedList.csv")) {
-            // try-with-resources, инициализируется и
-            //открывается поток FileWriter с с параметром точки назначения файла
-            for (AdvancedLibrary user : advList) {//улучшенный цикл for по списку библиотек
+            // try-with-resources, inițializat și
+            // deschide un flux FileWriter cu un parametru de destinație a fișierului
+            for (AdvancedLibrary user : advList) {// îmbunătățit pentru bucla pe lista de biblioteci
                 String line = ToCsv.toLineAdLib(user);
-                //инициализация вводимой в файл строки возвращаемой строкой вызываемого метода
-                fileW.write(line);//запись строки в файл
-            }// цикл закрывается
+                // inițializarea șirului introdus în fișier cu șirul returnat al metodei apelate
+                fileW.write(line); // scrie linie în fișier
+            } // bucla este închisă
         } catch (IOException ex) {
-            //catch для исключений, которые могут появиться в ходе выполнения кода в try,
-            //ожидается ошибка ввода-вывода
-            LOG.log(Level.SEVERE, null, ex); //вывод ошибки на консоль через логгер
-        }//закрывается связка try-catch, FileWriter автоматически закрывается
-    }//метод закрывается
+            // captează excepțiile care pot apărea în timpul execuției codului în încercare,
+            // Se așteaptă eroare I/O
+            LOG.log(Level.SEVERE, null, ex); // Ieșire de eroare către consolă prin intermediul loggerului
+        } // legătura try-catch este închisă, FileWriter este închis automat
+    } // metoda este închisă
 
     private static void importBook() {
-        //Метод импорта информации о книгах в текстовый файл
+        // Metodă de importare a informațiilor despre cărți într-un fișier text
         List<Book> list = new ArrayList();
         try (FileReader fileR = new FileReader("bookList.csv")) {
-            // try-with-resources, инициализируется и
-            //открывается поток FileReader с с параметром точки назначения файла
+            // try-with-resources, inițializat și
+            // deschide un flux FileReader cu un parametru de destinație a fișierului
             BufferedReader buffR = new BufferedReader(fileR);
-            //инициализация обьекта класса BufferedReader из потока FileReader
-            //для оптимального чтения из файла
+            // inițializați un obiect din clasa BufferedReader din fluxul FileReader
+            // pentru citirea optimă din fișier
             String line = null; //инициализация считываемой строки
             while ((line = buffR.readLine()) != null) {
-                //цикл while, пока строка, считываемая из файла  существует
+                // buclă while atâta timp cât există linia citită din fișier
                 Book cl = ToCsv.toClientBook(line);
-                //создание нового обьекта класса книг с параметрами, возвращаемые вызываемым методов
-                list.add(cl); //добавление обьекта класса книг в список
-            }// цикл закрывается
+                // creează un nou obiect din clasa cărților cu parametrii returnați de metodele apelate
+                list.add(cl);// adaugă un obiect de clasă de carte la listă
+            } // bucla este închisă
         } catch (IOException ex) {
-            //catch для исключений, которые могут появиться в ходе выполнения кода в try,
-            //ожидаются ошибки ввода-вывода и ненахождения файла
-            LOG.log(Level.SEVERE, null, ex);//вывод ошибки на консоль через логгер
-        }//закрывается связка try-catch, FileReader автоматически закрывается
-        bookList = (ArrayList<Book>) list; //присваивание нового значения списку книг
-        for (Book b : bookList) { //улучшенный цикл for по списку книг
+            // captează excepțiile care pot apărea în timpul execuției codului în încercare,
+            // aștept erori I/O și fișierul nu a fost găsit
+            LOG.log(Level.SEVERE, null, ex);// ieșire de eroare către consolă prin intermediul loggerului
+        }// legătura try-catch este închisă, FileReader este închis automat
+        bookList = (ArrayList<Book>) list; // atribuie o nouă valoare listei de cărți
+        for (Book b : bookList) { // bucla for îmbunătățită pentru lista de cărți
             System.out.println(b.toString());
-            //вывод информации на экран с помощью метода toString()
-        }// цикл закрывается
-    }//метод закрывается
+            // afișează informații pe ecran folosind metoda toString ().
+        } // bucla este închisă
+    } // metoda este închisă
 
     private static void importLib() {
-        //Метод импорта информации о библиотеках в текстовый файл
+        // Metodă de importare a informațiilor despre biblioteci într-un fișier text
         List<Library> list = new ArrayList();
         try (FileReader fileR = new FileReader("libraryList.csv")) {
-            // try-with-resources, инициализируется и
-            //открывается поток FileReader с с параметром точки назначения файла
+            // try-with-resources, inițializat și
+            // deschide un flux FileReader cu un parametru de destinație a fișierului
             BufferedReader buffR = new BufferedReader(fileR);
-            //инициализация обьекта класса BufferedReader из потока FileReader
-            //для оптимального чтения из файла
-            String line = null;//инициализация считываемой строки
+            // inițializați un obiect din clasa BufferedReader din fluxul FileReader
+            // pentru citirea optimă din fișier
+            String line = null; // inițializarea liniei de citire
             while ((line = buffR.readLine()) != null) {
-                //цикл while, пока строка, считываемая из файла  существует
+                // buclă while atâta timp cât există linia citită din fișier
                 Library cl = ToCsv.toClientLib(line);
-                //создание нового обьекта класса библиотеки с параметрами, возвращаемые вызываемым методов
-                list.add(cl);//добавление обьекта класса книг в список
-            }// цикл закрывается
+                // creăm un nou obiect al clasei bibliotecii cu parametrii returnați de metodele apelate
+                list.add(cl); // adaugă un obiect de clasă de carte la listă
+            } // bucla este închisă
         } catch (IOException ex) {
-            //catch для исключений, которые могут появиться в ходе выполнения кода в try,
-            //ожидаются ошибки ввода-вывода и ненахождения файла
-            LOG.log(Level.SEVERE, null, ex);//вывод ошибки на консоль через логгер
-        }//закрывается связка try-catch, FileReader автоматически закрывается
-        libList = (ArrayList<Library>) list;//присваивание нового значения списку библиотек
-        for (Library l : libList) {//улучшенный цикл for по списку библиотек
+            // captează excepțiile care pot apărea în timpul execuției codului în încercare,
+            // aștept erori I/O și fișierul nu a fost găsit
+            LOG.log(Level.SEVERE, null, ex);// ieșire de eroare către consolă prin intermediul loggerului
+        }// legătura try-catch este închisă, FileReader este închis automat
+        libList = (ArrayList<Library>) list;// atribuiți o nouă valoare listei de biblioteci
+        for (Library l : libList) {// bucla for îmbunătățită în lista de biblioteci
             System.out.println(l.toString());
-            //вывод информации на экран с помощью метода toString()
-        }// цикл закрывается
-    }//метод закрывается
+            // afișează informații pe ecran folosind metoda toString ().
+        } // bucla este închisă
+    } // metoda este închisă
 
     private static void importAdvLib() {
-        //Метод импорта информации о библиотеках с доп. параметрами в текстовый файл
+        // Metodă de importare a informațiilor despre biblioteci cu add. parametri într-un fișier text
         List<AdvancedLibrary> list = new ArrayList();
         try (FileReader fileR = new FileReader("libraryAdvancedList.csv")) {
-            // try-with-resources, инициализируется и
-            //открывается поток FileReader с с параметром точки назначения файла
+            // try-with-resources, inițializat și
+            // deschide un flux FileReader cu un parametru de destinație a fișierului
             BufferedReader buffR = new BufferedReader(fileR);
-            //инициализация обьекта класса BufferedReader из потока FileReader
-            //для оптимального чтения из файла
-            String line = null;//инициализация считываемой строки
+            // inițializați un obiect din clasa BufferedReader din fluxul FileReader
+            // pentru citirea optimă din fișier
+            String line = null; // inițializarea liniei de citire
             while ((line = buffR.readLine()) != null) {
-                //цикл while, пока строка, считываемая из файла  существует
+                // buclă while atâta timp cât există linia citită din fișier
                 AdvancedLibrary cl = ToCsv.toClientAdvLib(line);
-                //создание нового обьекта класса дополненной библиотеки с параметрами,
-                //возвращаемые вызываемым методов
-                list.add(cl);//добавление обьекта класса книг в список
-            }// цикл закрывается
+                // creăm un nou obiect din clasa bibliotecii augmentate cu parametri,
+                // returnat de metodele apelate
+                list.add(cl); // adaugă un obiect de clasă de carte la listă
+            } // bucla este închisă
         } catch (IOException ex) {
-            //catch для исключений, которые могут появиться в ходе выполнения кода в try,
-            //ожидаются ошибки ввода-вывода и ненахождения файла
-            LOG.log(Level.SEVERE, null, ex);//вывод ошибки на консоль через логгер
-        }//закрывается связка try-catch, FileReader автоматически закрывается
+            // captează excepțiile care pot apărea în timpul execuției codului în încercare,
+            // aștept erori I/O și fișierul nu a fost găsit
+            LOG.log(Level.SEVERE, null, ex);// ieșire de eroare către consolă prin intermediul loggerului
+        }// legătura try-catch este închisă, FileReader este închis automat
         advList = (ArrayList<AdvancedLibrary>) list;
-        //присваивание нового значения списку дополненных библиотек
+        // atribuie o nouă valoare listei de biblioteci augmentate
         for (AdvancedLibrary al : advList) {
-            //улучшенный цикл for по списку дополненных библиотек
+            // s-a îmbunătățit pentru bucla pe lista bibliotecilor adăugate
             System.out.println(al.toString());
-            //вывод информации на экран с помощью метода toString()
-        }// цикл закрывается
-    }//метод закрывается
+            // afișează informații pe ecran folosind metoda toString ().
+        } // bucla este închisă
+    } // metoda este închisă
 
 
     private static void menu() {
-        //Метод главного меню для пользователя в консоли
-        int ch = -1; // Инициализация переменной, отвечаюшей за выбор пользователя
+        // Metoda meniului principal pentru utilizator în consolă
+        int ch = -1; // Inițializarea variabilei responsabile de selecția utilizatorilor
 
-        System.out.println(ch + "ch");
-
-        do { //метод do-while
-            System.out.println("\tTHE MENU");//подсказка для пользователя
-            System.out.println("PLEASE CHOOSE ONE OF THE FOLLOWING");//подсказка для пользователя
-            System.out.println("1. Insert the information (it will be ехported automatically)");//подсказка для пользователя
-            System.out.println("2. Import information      (it will be shown automatically)");//подсказка для пользователя
-            System.out.println("3. View the information");//подсказка для пользователя
-            System.out.println("4. Do the tasks");//подсказка для пользователя
-            System.out.println("0. Exit");//подсказка для пользователя
-            System.out.print("Your choice -> ");//подсказка для пользователя
-            ch = sc.nextInt(); // считываение значение переменной из консоли
-            choise(ch); //вызов метода обработки выбора пользователя
-        } while (ch > 1);// цикл закрывается, если пользователь выберет "0"
-    }//метод закрывается
+        do {// metoda do-while
+            System.out.println("\tMENIU"); // indiciu pentru utilizator
+            System.out.println("VĂ RUGĂM ALEGEȚI UNUL DIN URMĂTOARELE OPȚIUNI"); // indiciu pentru utilizator
+            System.out.println("1. Inserați informațiile (va fi exportată automat)"); // indiciu pentru utilizator
+            System.out.println("2. Importați informații (va fi afișat automat)"); // indiciu pentru utilizator
+            System.out.println("3. Vizualizați informațiile"); // indiciu pentru utilizator
+            System.out.println("4. Efectuați sarcinile"); // indiciu pentru utilizator
+            System.out.println("0. Ieșire"); // indiciu pentru utilizator
+            System.out.print("Alegerea dvs. -> "); // indiciu pentru utilizator
+            ch = sc.nextInt(); // citește valoarea variabilei din consolă
+            choise(ch); // apelează metoda de gestionare a selecției utilizatorilor
+        } while (ch != 0); // bucla este închisă dacă utilizatorul selectează „0”
+    } // metoda este închisă
 
     private static void choise(int ch) {
-        //метод обработки выбора пользователя с целочисленным параметром
-        switch (ch) { //switch для обработки разных вариантов выбора пользователя по параметру
-            case 1 -> { //в случае, выбора единицы выведется меню выбора ввода информации
-                int c = -1; //инициализация переменной выбора
+        // metodă pentru gestionarea selecției utilizatorului cu un parametru întreg
+        switch (ch) {// comutator pentru procesarea diferitelor opțiuni pentru selectarea utilizatorului în funcție de parametru
+            case 1 -> {// dacă unitatea este selectată, va fi afișat meniul de selectare a introducerii informațiilor
+                int c = -1; // inițializați variabila de selecție
 
-                do {//метод do-while
-                    System.out.println("\nINSERT INFORMATION");//подсказка для пользователя
-                    System.out.println("PLEASE CHOOSE ONE OF THE FOLLOWING");
-                    //подсказка для пользователя
-                    System.out.println("1. Books");//подсказка для пользователя
-                    System.out.println("2. Libraries");//подсказка для пользователя
-                    System.out.println("0. Exit");//подсказка для пользователя
-                    System.out.print("Your choice -> ");//подсказка для пользователя
-                    c = sc.nextInt();// считываение значение переменной из консоли
-                    insert(c); //вызов метода обработки выбора пользователя ввода информации
-                } while (c > 1);// цикл закрывается, если пользователь выберет "0"
-            }//case закрывается
-            case 2 -> {//в случае, выбора двойки выведется меню выбора импорта информации
-                int c = -1;//инициализация переменной выбора
-                do {//метод do-while
-                    System.out.println("\nIMPORT & SHOW INFORMATION");
-                    //подсказка для пользователя
-                    System.out.println("PLEASE CHOOSE ONE OF THE FOLLOWING");
-                    //подсказка для пользователя
-                    System.out.println("1. Books");//подсказка для пользователя
-                    System.out.println("2. Libraries");//подсказка для пользователя
-                    System.out.println("0. Exit");//подсказка для пользователя
-                    System.out.print("Your choice -> ");//подсказка для пользователя
-                    c = sc.nextInt();// считываение значение переменной из консоли
+                do {// metoda do-while
+                    System.out.println("\nINSERT INFORMATION"); // indiciu pentru utilizator
+                    System.out.println("VĂ RUGĂM ALEGEȚI UNUL DIN URMĂTOARELE OPȚIUNI"); // indiciu pentru utilizator
+                    System.out.println("1. Cărți"); // indiciu pentru utilizator
+                    System.out.println("2. Biblioteci"); // indiciu pentru utilizator
+                    System.out.println("0. Ieșire"); // indiciu pentru utilizator
+                    System.out.print("Alegerea dvs. -> "); // indiciu pentru utilizator
+                    c = sc.nextInt(); // citește valoarea variabilei din consolă
+                    insert(c); // apelează metoda de gestionare a alegerii utilizatorului de introducere a informațiilor
+                } while (c != 0); // bucla este închisă dacă utilizatorul selectează „0”
+            } // cazul este închis
+            case 2 -> {// în cazul în care se selectează două, va fi afișat meniul de selecție a importului de informații
+                int c = -1; // inițializați variabila de selecție
+                do {// metoda do-while
+                    System.out.println("\nIMPORTĂ & AFIȘĂ INFORMAȚII"); // indiciu pentru utilizator
+                    System.out.println("VĂ RUGĂM ALEGEȚI UNUL DIN URMĂTOARELE OPȚIUNI"); // indiciu pentru utilizator
+                    System.out.println("1. Cărți"); // indiciu pentru utilizator
+                    System.out.println("2. Biblioteci"); // indiciu pentru utilizator
+                    System.out.println("0. Ieșire"); // indiciu pentru utilizator
+                    System.out.print("Alegerea dvs. -> "); // indiciu pentru utilizator
+                    c = sc.nextInt(); // citește valoarea variabilei din consolă
                     importShow(c);
-                    //вызов метода обработки выбора пользователя импорта информации
-                } while (c > 1);// цикл закрывается, если пользователь выберет "0"
-            }//case закрывается
-            case 3 -> {//в случае, выбора тройки выведется меню выбора вывода информации
-                int c = -1;//инициализация переменной выбора
-                do {//метод do-while
-                    System.out.println("\nSHOW INFORMATION");//подсказка для пользователя
-                    System.out.println("PLEASE CHOOSE ONE OF THE FOLLOWING");
-                    //подсказка для пользователя
-                    System.out.println("1. Books");//подсказка для пользователя
-                    System.out.println("2. Libraries");//подсказка для пользователя
-                    System.out.println("0. Exit");//подсказка для пользователя
-                    System.out.print("Your choice -> ");//подсказка для пользователя
-                    c = sc.nextInt();// считываение значение переменной из консоли
-                    show(c);//вызов метода обработки выбора пользователя вывода информации
-                } while (c > 1);// цикл закрывается, если пользователь выберет "0"
-            }//case закрывается
-            case 4 -> {//в случае, выбора четверки выполнятся задачи, описанные в задаче
+                    // apelează metoda de gestionare la alegerea utilizatorului de a importa informații
+                } while (c != 0); // bucla este închisă dacă utilizatorul selectează „0”
+            } // cazul este închis
+            case 3 -> {// dacă este selectat un triplet, va fi afișat un meniu pentru selectarea informațiilor
+                int c = -1; // inițializați variabila de selecție
+                do {// metoda do-while
+                    System.out.println("\nAfișați informații"); // indiciu pentru utilizator
+                    System.out.println("VĂ RUGĂM ALEGEȚI UNUL DIN URMĂTOARELE OPȚIUNI");// indiciu pentru utilizator
+                    System.out.println("1. Cărți"); // indiciu pentru utilizator
+                    System.out.println("2. Biblioteci"); // indiciu pentru utilizator
+                    System.out.println("0. Ieșire"); // indiciu pentru utilizator
+                    System.out.print("Alegerea dvs. -> "); // indiciu pentru utilizator
+                    c = sc.nextInt(); // citește valoarea variabilei din consolă
+                    show(c); // apelează metoda de gestionare a selectării de către utilizator a afișajului de informații
+                } while (c != 0); // bucla este închisă dacă utilizatorul selectează „0”
+            } // cazul este închis
+            case 4 -> {// dacă se selectează patru, sarcinile descrise în sarcină vor fi efectuate
                 numberOfLibsThatStartWith45();
-                //вызов метода подсчета библиотек номер телефона которых начинается с 45
-                booksWithMaxPages();//вызов метода подсчета книг с максимальным кол-вом страниц
+                // apelează metoda de numărare a bibliotecilor al căror număr de telefon începe cu 45
+                booksWithMaxPages(); // apelează metoda de numărare a cărților cu numărul maxim de pagini
                 libsWithFloors();
-                //вызов метода подсчета библиотек с кол-вом этажей, указанных пользователем
-            }//case закрывается
-        }//switch закрывается
-    }//метод закрывается
+                // apelează metoda de numărare a bibliotecilor cu numărul de etaje specificat de utilizator
+            } // cazul este închis
+        } // Comutatorul este închis
+    } // metoda este închisă
 
     private static void insert(int c) {
-        //метод обработки выбора пользователя ввода информации
+        // metoda de procesare pentru selectarea de către utilizator a informațiilor introduse
         switch (c) {
-            //switch для обработки разных вариантов выбора пользователя по параметру ввода информации
-            case 1 -> {//в случае, выбора единицы бу
-                insertBooks();// вызов метода ввода списка книг из файла
-                exportBook();// вызов метода экспорта списка книг из файла
-            }//case закрывается
-            case 2 -> {//в случае, выбора единицы
-                insertLibraries();// вызов метода ввода списка библиотек из файла
-                exportLib();// вызов метода экспорта списка библиотек из файла
-            }//case закрывается
-            case 0 -> {//в случае, выбора единицы
-                menu();//вызов метода вывода главного меню
-            }//case закрывается
-        }//switch закрывается
-    }//метод закрывается
+            // comutați pentru procesarea diferitelor opțiuni pentru selectarea utilizatorului prin parametrul de intrare a informațiilor
+            case 1 -> {// în cazul selecției unității bu
+                insertBooks(); // apelează metoda de introducere a listei de cărți dintr-un fișier
+                exportBook(); // apelează metoda de export a listei de cărți dintr-un fișier
+            } // cazul este închis
+            case 2 -> {// în cazul selecției unității
+                insertLibraries(); // apelează metoda de introducere a unei liste de biblioteci dintr-un fișier
+                exportLib(); // apelează metoda de export a listei de biblioteci dintr-un fișier
+            } // cazul este închis
+            case 0 -> {// în cazul selecției unității
+                menu(); // apelează metoda de afișare a meniului principal
+            } // cazul este închis
+        } // Comutatorul este închis
+    } // metoda este închisă
 
     private static void importShow(int c) {
-        //метод обработки выбора пользователя импорта информации
+        // metoda de gestionare a selectării de către utilizator a importului de informații
         switch (c) {
-            //switch для обработки разных вариантов выбора пользователя по параметру импорта информации
+            // comută pentru a gestiona diferite opțiuni pentru selectarea utilizatorului prin parametrul de import de informații
             case 1 -> {
-                //в случае, выбора единицы выполнится метод обработки выбора импорта информации
-                importBook();// вызов метода импорта списка книг из файла
-            }//case закрывается
+                // dacă este selectată o unitate, se va executa metoda de procesare a selecției de import de informații
+                importBook(); // apelează metoda de importare a unei liste de cărți dintr-un fișier
+            } // cazul este închis
             case 2 -> {
-                //в случае, выбора двойки выполнится метод обработки выбора экспорта информации
-                importLib(); // вызов метода импорта списка библиотек из файла
+                // în cazul alegerii a două, se va executa metoda de prelucrare a alegerii exportului de informații
+                importLib(); // apelează metoda de importare a unei liste de biblioteci dintr-un fișier
                 importAdvLib();
-                // вызов метода импорта списка библиотек с доп. параметрами из файла
-            }//case закрывается
-            case 0 -> {//в случае, выбора нуля пользователь вернется в главное меню
-                menu();//вызов метода вывода главного меню
-            }//case закрывается
-        }//switch закрывается
-    }//метод закрывается
+                // apelează metoda de import pentru lista de biblioteci cu suplimentare. parametrii din fișier
+            } // cazul este închis
+            case 0 -> {// dacă este selectat zero, utilizatorul va reveni la meniul principal
+                menu(); // apelează metoda de afișare a meniului principal
+            } // cazul este închis
+        } // Comutatorul este închis
+    } // metoda este închisă
 
     private static void show(int c) {
-        //метод обработки выбора пользователя вывода на косноль информации
-        switch (c) {//switch для обработки разных вариантов выбора пользователя
-            //по параметру вывода на консоль информации
-            case 1 -> {//в случае, выбора единицы выполнится вывод на консоль информации о книгах
-                for (Book b : bookList) {//улучшенный цикл for по спику книг
-                    System.out.println("Book #"); //вывод информации на консоль
-                    System.out.println("Isbn: " + b.getIsbn());
-                    //вывод isbn книги
-                    System.out.println("Title: " + b.getTitle());
-                    //вывод названия книги
-                    System.out.println("Author: " + b.getAuthor());
-                    //вывод автора книги
-                    System.out.println("Genre: " + b.getGenre());
-                    //вывод жанра книги
-                    System.out.println("Release Date: " + b.getDateOfRelease());
-                    //вывод даты выпуска книги
-                    System.out.println("Language: " + b.getLang());
-                    //вывод языка книги
-                    System.out.println("Pages: " + b.getNumberOfPages());
-                    //вывод кол-ва страниц книги
-                    System.out.println("Price: " + b.getPrice());
-                    //вывод цены книги
-                    System.out.println("Availabilty: " + b.getAvalabil());
-                    //вывод доступности ниги
-                }// цикл закрывается
-            }//case закрывается
+        // metoda de gestionare a alegerii utilizatorului de afisare a informatiilor pe spatiu
+        switch (c) {// comutator pentru gestionarea diferitelor opțiuni ale utilizatorului
+            // prin parametrul de ieșire a informațiilor către consolă
+            case 1 -> {// dacă este selectată unitatea, informațiile despre cărți vor fi afișate pe consolă
+                for (Book b : bookList) {// bucla for îmbunătățită pentru lista de cărți
+                    System.out.println("Numărul cărții"); // scoate informații în consolă
+                    System.out.println("Isbn:" + b.getIsbn());
+                    // ieșirea isbn a cărții
+                    System.out.println("Titlu:" + b.getTitle());
+                    // afișează titlul cărții
+                    System.out.println("Autor:" + b.getAuthor());
+                    // ieșirea autorului cărții
+                    System.out.println("Gen:" + b.getGenre());
+                    // afișează genul cărții
+                    System.out.println("Data lansării:" + b.getDateOfRelease());
+                    // afișează data lansării cărții
+                    System.out.println("Limba:" + b.getLang());
+                    // afișează limba cărții
+                    System.out.println("Pagini:" + b.getNumberOfPages());
+                    // afișează numărul de pagini de carte
+                    System.out.println("Preț:" + b.getPrice());
+                    // afișează prețul cărții
+                    System.out.println("Disponibilitate:" + b.getAvalabil());
+                    // afișează disponibilitatea negru
+                } // bucla este închisă
+            } // cazul este închis
             case 2 -> {
-                //в случае, выбора двойки выполнится вывод на консоль информации о библиотеках
-                for (int i = 0; i < libList.size(); i++) {//цикл for по списку библиотек
+                // în cazul unei alegeri a două, se va efectua ieșirea către consola a informațiilor despre biblioteci
+                for (int i = 0; i < libList.size(); i++) {// for parcurge lista de biblioteci
                     Library l = libList.get(i);
-                    //инициализация обьекта класса library текущей позиции в списке
-                    System.out.println("Library");//вывод информации на консоль
-                    System.out.println("ID: " + l.getIdLibrary());//вывод id библиотеки
-                    System.out.println("Address: " + l.getAdres());//вывод адреса библиотеки
-                    System.out.println("Telephone number: " + l.getTelephone());
-                    //вывод контактного номера телефона библиотеки
-                    System.out.println("Books' IDs: " + l.getBooks());
-                    //вывод списка isbn книг библиотеки
-                    System.out.println("District: " + l.getDistrict());
-                    //вывод Района библиотеки
-                    System.out.println("Advanced");//вывод информации на консоль
+                    // inițializarea obiectului bibliotecă a poziției curente în listă
+                    System.out.println("Bibliotecă"); // trimite informații către consolă
+                    System.out.println("ID:" + l.getIdLibrary()); // afișează id-ul bibliotecii
+                    System.out.println("Adresa:" + l.getAdres()); // afișează adresa bibliotecii
+                    System.out.println("Număr de telefon:" + l.getTelephone());
+                    // afișează numărul de telefon de contact al bibliotecii
+                    System.out.println("ID-urile cărților:" + l.getBooks());
+                    // afișează lista isbn a cărților din bibliotecă
+                    System.out.println("District:" + l.getDistrict());
+                    // ieșire din Zona Bibliotecii
+                    System.out.println("Avansat"); // trimite informații către consolă
                     for (int j = 0; j < libList.size(); j++) {
-                        //цикл for  по списку библиотек с доп. параметрами
+                        // pentru a trece prin lista de biblioteci cu add. parametrii
                         AdvancedLibrary al = advList.get(j);
-                        //инициализация обьекта класса AdvancedLibrary текущей позиции в списке
+                        // inițializarea unui obiect din clasa AdvancedLibrary a poziției curente din listă
                         if (al.getId() == l.getIdLibrary()) {
-                            //проверяется, является дополнительная информация актуальной для текущей библиотеки
-                            System.out.println("Number of Floors: " + al.getNumberOfFloors());
-                            //вывод кол-ва этажей библиотеки
-                            System.out.println("Name of Library: " + al.getLibraryName());
-                            //вывод названия библиотеки
-                        }//if закрывается
-                    }// цикл закрывается
-                }// цикл закрывается
-
-            }//case закрывается
-            case 0 -> {//в случае, выбора единицы
-                menu();//вызов метода вывода главного меню
-            }//case закрывается
-        }//switch закрывается
-    }//метод закрывается
-}//класс закрывается
+                            // verifică dacă informații suplimentare sunt relevante pentru biblioteca curentă
+                            System.out.println("Număr de etaje:" + al.getNumberOfFloors());
+                            // afișează numărul de etaje din bibliotecă
+                            System.out.println("Numele bibliotecii:" + al.getLibraryName());
+                            // afișează numele bibliotecii
+                        } // dacă este închis
+                    } // bucla este închisă
+                } // bucla este închisă
+            } // cazul este închis
+            case 0 -> {// în cazul selecției unității
+                menu(); // apelează metoda de afișare a meniului principal
+            } // cazul este închis
+        } // Comutatorul este închis
+    } // metoda este închisă
+} // clasa este închisă
 
