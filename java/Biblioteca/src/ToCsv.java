@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ToCsv {
 
     // constante
-    private final static String ENTER = ""; // constantă pentru spațiu
+    private final static String ENTER = " "; // constantă pentru spațiu
     private final static String ENDL = "\n"; // constantă pentru a comuta la o linie nouă
 
     public static String toLineBook(Book book) {// metodă de traducere a informațiilor despre carte într-un șir cu un parametru de tip Book
@@ -103,7 +103,7 @@ public class ToCsv {
         // prin conversia explicită a celui de-al patrulea element al matricei de șiruri în int
         ArrayList<Integer> l = new ArrayList<>();
         // creează o listă pentru stocarea cărților din bibliotecă isbn
-        int i = 4; // inițializează indexul elementului din tabloul de șiruri
+        int i = 3; // inițializează indexul elementului din tabloul de șiruri
         for (int j = 0; j < n; i++, j++) {
             // bucla pentru a scrie cărți de bibliotecă ISbn în listă până la numărul de cărți de bibliotecă
             l.add(Integer.parseInt(data[i]));

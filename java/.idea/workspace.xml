@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa577871-e75a-43da-ba0d-3a184957d135" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Autocamion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Motocicleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Test3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Test4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Test5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Test6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator2/src/Vehicul.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator3/src/Airplane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Biblioteca/src/ToCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/Biblioteca/src/ToCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator1/src/Airplane.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator1/src/Airplane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator1/src/TestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator1/src/TestDrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex1/date.in" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex1/date.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex1/date.out" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex1/date.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex1/ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex1/ex1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex2/date.in" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex2/date.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex2/date.out" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex2/date.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex2/ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex2/ex2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex3/date.in" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex3/date.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex3/date.out" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex3/date.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex3/ex3.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex3/ex3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex4/date.in" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex4/date.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex4/date.out" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex4/date.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex4/ex4.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex4/ex4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex5/date.in" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex5/date.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex5/date.out" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex5/date.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator2/src/ex5/ex5.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator_hz/src/ex5/ex5.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="21Bg6rG8qBUI2oOdSfjqsHC9VnR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestDrive">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="laborator3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test5" />
+      <module name="laborator2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test6" />
+      <module name="laborator2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestDrive" />
+      <module name="anul-3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vehicle$Car" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Vehicle$Car" />
+      <module name="laborator2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestDrive" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Vehicle$Car" />
+        <item itemvalue="Application.Test6" />
+        <item itemvalue="Application.Test5" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa577871-e75a-43da-ba0d-3a184957d135" name="Changes" comment="" />
+      <created>1637419723119</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637419723119</updated>
+      <workItem from="1637419726057" duration="406000" />
+      <workItem from="1637422795945" duration="1522000" />
+      <workItem from="1639909159074" duration="16175000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
