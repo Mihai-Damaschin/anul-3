@@ -1,4 +1,4 @@
-import { Button, Col, Row, Textarea } from "ebs-design";
+import { Button, Col, Input, Row, Textarea } from "ebs-design";
 import { useStateHandlers } from "hooks";
 import { useEffect, useRef } from "react";
 
@@ -7,6 +7,8 @@ interface StateProps {
   encryptedText: string;
   decryptionTextarea: string;
   decryptionText: string;
+  rowKey: string;
+  columnKey: string;
 }
 
 const KEY = "ABCDE";
@@ -20,17 +22,19 @@ export const PolybiossPage = () => {
     encryptedText: "",
     decryptionText: "",
     decryptionTextarea: "",
+    rowKey: KEY,
+    columnKey: KEY,
   });
 
   const table = useRef<{ [key: string]: string }>({});
 
   useEffect(() => {
-    const $key = KEY.split("");
+    table.current = {};
 
     let i = 0;
 
-    $key.forEach((column, columnKey) =>
-      $key.forEach(
+    state.columnKey.split("").forEach((column, columnKey) =>
+      state.rowKey.split("").forEach(
         (row, rowKey) =>
           (table.current = {
             ...table.current,
@@ -38,7 +42,7 @@ export const PolybiossPage = () => {
           })
       )
     );
-  }, []);
+  }, [state.columnKey, state.rowKey]);
 
   const onDecryptClick = () => {
     setState((prevState) => ({
@@ -74,6 +78,10 @@ export const PolybiossPage = () => {
     setState({ encryptionTextarea: value });
   const onDecryptTextareaChange = (value: string) =>
     setState({ decryptionTextarea: value });
+  const onRowKeyChange = (value: string | number) =>
+    typeof value === "string" && setState({ rowKey: value });
+  const onColumnKeyChange = (value: string | number) =>
+    typeof value === "string" && setState({ columnKey: value });
 
   return (
     <>
@@ -82,6 +90,21 @@ export const PolybiossPage = () => {
           <h3>Sistemul de criptare Polybios</h3>
         </Col>
       </Row>
+
+      <Row className="mb-15">
+        <Col className="flex justify-content--center">
+          <span className="flex my-auto">Row key: </span>
+          <Input value={state.rowKey} onChange={onRowKeyChange} />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col className="flex justify-content--center">
+          <span className="flex my-auto">Column key: </span>
+          <Input value={state.columnKey} onChange={onColumnKeyChange} />
+        </Col>
+      </Row>
+
       <Row className="caesar-page">
         <Col className="flex flex--column">
           <Row className="mt-30">
