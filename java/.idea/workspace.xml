@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa577871-e75a-43da-ba0d-3a184957d135" name="Changes" comment="For Ionella">
-      <change afterPath="$PROJECT_DIR$/exam1/exam1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam1/src/Ex5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam2/exam2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam2/src/ContBancar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam2/src/ContBancarExtins.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam2/src/TestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="fa577871-e75a-43da-ba0d-3a184957d135" name="Changes" comment="Examen">
+      <change afterPath="$PROJECT_DIR$/exam2/src/ExempluStatic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laborator2/src/Laborator_2_Damaschi_Mhai_3I.pages" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laborator2/src/Laborator_2_Damaschin_Mihai_3I.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam1/src/Ex5.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam1/src/Ex5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam2/src/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam2/src/TestClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +51,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestClass">
+  <component name="RunManager" selected="Application.ExempluStatic">
     <configuration name="Ex5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex5" />
       <module name="exam1" />
@@ -65,16 +59,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Magazin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Magazin" />
-      <module name="laborator4" />
+    <configuration name="ExempluStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExempluStatic" />
+      <module name="exam2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="laborator3" />
+    <configuration name="Magazin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Magazin" />
+      <module name="laborator4" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,11 +89,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExempluStatic" />
         <item itemvalue="Application.TestClass" />
         <item itemvalue="Application.Ex5" />
         <item itemvalue="Application.Magazin" />
         <item itemvalue="Application.TestDrive" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +107,7 @@
       <updated>1637419723119</updated>
       <workItem from="1637419726057" duration="406000" />
       <workItem from="1637422795945" duration="1522000" />
-      <workItem from="1639909159074" duration="41199000" />
+      <workItem from="1639909159074" duration="44283000" />
     </task>
     <task id="LOCAL-00001" summary="For Ionella">
       <created>1639928217858</created>
@@ -136,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639976472889</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Examen">
+      <created>1639988336183</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639988336183</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="For Ionella" />
-    <option name="LAST_COMMIT_MESSAGE" value="For Ionella" />
+    <MESSAGE value="Examen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Examen" />
   </component>
 </project>

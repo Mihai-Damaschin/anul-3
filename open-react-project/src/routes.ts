@@ -3,6 +3,7 @@ import { lazy as $lazy } from "react";
 import { HomePage } from "features/home/pages/HomePage";
 import { CaesarPage } from "features/criptare/pages/CaesarPage";
 import { Test1 } from "./features/threejs/pages/Test1";
+import {PolybiossPage} from "./features/criptare/pages/Polybioss";
 
 export const lazy = (feature: string, page: string) =>
   $lazy(() => import(`features/${feature}/pages/${page}`));
@@ -34,6 +35,12 @@ export const routes: Route[] = [
         label: "Caesar",
         path: "/criptare/caesar",
         component: CaesarPage,
+      },
+      {
+        name: "PolybiossPage",
+        label: "Polybios",
+        path: "/criptare/polybioss",
+        component: PolybiossPage,
       },
     ],
   },
